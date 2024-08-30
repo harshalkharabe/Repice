@@ -10,3 +10,89 @@ service.py:23 - 2024-08-26 17:23:35,924 - INFO - User Register Successfully id=U
 service.py:23 - 2024-08-26 17:23:35,924 - INFO - User Register Successfully id=UUID('3fa85f64-5717-4562-b3fc-2c963f66afa6') username='aniketpaa' firstname='Aniket' lastname='Bhudke' email='ani@pa.com' phone_no='1122112212' password='omgpa' is_logged_in='string'
 service.py:24 - 2024-08-26 17:24:06,968 - INFO - User Register Successfully id=UUID('ccf5c4a1-8a99-4e71-9951-5391453e230e') username='aniketpaa' firstname='Aniket' lastname='Bhudke' email='ani@pa.com' phone_no='1122112212' password='omgpa' is_logged_in='string'
 service.py:24 - 2024-08-26 17:24:06,968 - INFO - User Register Successfully id=UUID('ccf5c4a1-8a99-4e71-9951-5391453e230e') username='aniketpaa' firstname='Aniket' lastname='Bhudke' email='ani@pa.com' phone_no='1122112212' password='omgpa' is_logged_in='string'
+service.py:24 - 2024-08-30 22:43:51,321 - INFO - User Register Successfully id=UUID('4ebbd66c-b257-4427-8589-a81a25456856') username='string' firstname='string' lastname='string' email='user@example.com' phone_no='string' password='string' is_logged_in='string'
+service.py:24 - 2024-08-30 22:43:51,321 - INFO - User Register Successfully id=UUID('4ebbd66c-b257-4427-8589-a81a25456856') username='string' firstname='string' lastname='string' email='user@example.com' phone_no='string' password='string' is_logged_in='string'
+service.py:29 - 2024-08-30 22:57:17,210 - ERROR - Error : Class 'src.authentication.auth_models.model.User_v2' is not mapped
+service.py:29 - 2024-08-30 22:57:17,210 - ERROR - Error : Class 'src.authentication.auth_models.model.User_v2' is not mapped
+service.py:28 - 2024-08-30 22:57:40,945 - ERROR - Error : Class 'src.authentication.auth_models.model.User_v2' is not mapped
+service.py:28 - 2024-08-30 22:57:40,945 - ERROR - Error : Class 'src.authentication.auth_models.model.User_v2' is not mapped
+service.py:28 - 2024-08-30 22:59:14,757 - ERROR - Error : Class 'src.authentication.auth_models.model.User_v2' is not mapped
+service.py:28 - 2024-08-30 22:59:14,757 - ERROR - Error : Class 'src.authentication.auth_models.model.User_v2' is not mapped
+service.py:28 - 2024-08-30 22:59:39,202 - ERROR - Error : (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+service.py:28 - 2024-08-30 22:59:39,202 - ERROR - Error : (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+service.py:28 - 2024-08-30 23:01:51,927 - ERROR - Error : (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 1: INSERT INTO "user" (id, username, firstname, lastname, email...
+                    ^
+
+[SQL: INSERT INTO "user" (id, username, firstname, lastname, email, phone_no, password, is_logged_in) VALUES (%(id)s, %(username)s, %(firstname)s, %(lastname)s, %(email)s, %(phone_no)s, %(password)s, %(is_logged_in)s)]
+[parameters: {'id': UUID('816fbcfe-21e5-4fd4-ba7c-c8fca5761c02'), 'username': 'kunalaswar', 'firstname': 'Kunal', 'lastname': 'Aswar', 'email': 'kun@al.com', 'phone_no': 'string', 'password': 'ku@nl', 'is_logged_in': 'string'}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+service.py:28 - 2024-08-30 23:01:51,927 - ERROR - Error : (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 1: INSERT INTO "user" (id, username, firstname, lastname, email...
+                    ^
+
+[SQL: INSERT INTO "user" (id, username, firstname, lastname, email, phone_no, password, is_logged_in) VALUES (%(id)s, %(username)s, %(firstname)s, %(lastname)s, %(email)s, %(phone_no)s, %(password)s, %(is_logged_in)s)]
+[parameters: {'id': UUID('816fbcfe-21e5-4fd4-ba7c-c8fca5761c02'), 'username': 'kunalaswar', 'firstname': 'Kunal', 'lastname': 'Aswar', 'email': 'kun@al.com', 'phone_no': 'string', 'password': 'ku@nl', 'is_logged_in': 'string'}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+service.py:28 - 2024-08-30 23:11:41,041 - ERROR - Error : (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 1: INSERT INTO "user" (id, username, firstname, lastname, email...
+                    ^
+
+[SQL: INSERT INTO "user" (id, username, firstname, lastname, email, phone_no, password, is_logged_in) VALUES (%(id)s, %(username)s, %(firstname)s, %(lastname)s, %(email)s, %(phone_no)s, %(password)s, %(is_logged_in)s)]
+[parameters: {'id': UUID('2aef06ef-bec1-41ce-a0cc-90e638e59dce'), 'username': 'kunalaswar', 'firstname': 'Kunal', 'lastname': 'Aswar', 'email': 'kun@al.com', 'phone_no': 'string', 'password': 'ku@nl', 'is_logged_in': 'string'}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+service.py:28 - 2024-08-30 23:11:41,041 - ERROR - Error : (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 1: INSERT INTO "user" (id, username, firstname, lastname, email...
+                    ^
+
+[SQL: INSERT INTO "user" (id, username, firstname, lastname, email, phone_no, password, is_logged_in) VALUES (%(id)s, %(username)s, %(firstname)s, %(lastname)s, %(email)s, %(phone_no)s, %(password)s, %(is_logged_in)s)]
+[parameters: {'id': UUID('2aef06ef-bec1-41ce-a0cc-90e638e59dce'), 'username': 'kunalaswar', 'firstname': 'Kunal', 'lastname': 'Aswar', 'email': 'kun@al.com', 'phone_no': 'string', 'password': 'ku@nl', 'is_logged_in': 'string'}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+service.py:28 - 2024-08-30 23:12:55,131 - ERROR - Error : (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 1: INSERT INTO "user" (id, username, firstname, lastname, email...
+                    ^
+
+[SQL: INSERT INTO "user" (id, username, firstname, lastname, email, phone_no, password, is_logged_in) VALUES (%(id)s, %(username)s, %(firstname)s, %(lastname)s, %(email)s, %(phone_no)s, %(password)s, %(is_logged_in)s)]
+[parameters: {'id': UUID('39f9056f-2ab2-48b9-b8f6-bfc488c883e8'), 'username': 'kunalaswar', 'firstname': 'Kunal', 'lastname': 'Aswar', 'email': 'kun@al.com', 'phone_no': 'string', 'password': 'ku@nl', 'is_logged_in': 'string'}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+service.py:28 - 2024-08-30 23:12:55,131 - ERROR - Error : (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 1: INSERT INTO "user" (id, username, firstname, lastname, email...
+                    ^
+
+[SQL: INSERT INTO "user" (id, username, firstname, lastname, email, phone_no, password, is_logged_in) VALUES (%(id)s, %(username)s, %(firstname)s, %(lastname)s, %(email)s, %(phone_no)s, %(password)s, %(is_logged_in)s)]
+[parameters: {'id': UUID('39f9056f-2ab2-48b9-b8f6-bfc488c883e8'), 'username': 'kunalaswar', 'firstname': 'Kunal', 'lastname': 'Aswar', 'email': 'kun@al.com', 'phone_no': 'string', 'password': 'ku@nl', 'is_logged_in': 'string'}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+service.py:28 - 2024-08-30 23:22:51,959 - ERROR - Error : (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 1: INSERT INTO "user" (id, username, firstname, lastname, email...
+                    ^
+
+[SQL: INSERT INTO "user" (id, username, firstname, lastname, email, phone_no, password, is_logged_in) VALUES (%(id)s, %(username)s, %(firstname)s, %(lastname)s, %(email)s, %(phone_no)s, %(password)s, %(is_logged_in)s)]
+[parameters: {'id': UUID('b24a63c8-3ff4-4f61-b9d1-6e5ba3a85ad3'), 'username': 'string', 'firstname': 'string', 'lastname': 'string', 'email': 'user@example.com', 'phone_no': 'string', 'password': 'string', 'is_logged_in': 'string'}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+service.py:28 - 2024-08-30 23:22:51,959 - ERROR - Error : (psycopg2.errors.UndefinedTable) relation "user" does not exist
+LINE 1: INSERT INTO "user" (id, username, firstname, lastname, email...
+                    ^
+
+[SQL: INSERT INTO "user" (id, username, firstname, lastname, email, phone_no, password, is_logged_in) VALUES (%(id)s, %(username)s, %(firstname)s, %(lastname)s, %(email)s, %(phone_no)s, %(password)s, %(is_logged_in)s)]
+[parameters: {'id': UUID('b24a63c8-3ff4-4f61-b9d1-6e5ba3a85ad3'), 'username': 'string', 'firstname': 'string', 'lastname': 'string', 'email': 'user@example.com', 'phone_no': 'string', 'password': 'string', 'is_logged_in': 'string'}]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+service.py:28 - 2024-08-30 23:25:51,584 - ERROR - Error : (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type boolean: "string"
+LINE 1: ...Kharabe', 'harsh@k.com', '1234554321', 'hkharabe', 'string')
+                                                              ^
+
+[SQL: INSERT INTO "user" (id, username, firstname, lastname, email, phone_no, password, is_logged_in) VALUES (%(id)s, %(username)s, %(firstname)s, %(lastname)s, %(email)s, %(phone_no)s, %(password)s, %(is_logged_in)s)]
+[parameters: {'id': UUID('309ee7dd-c2b7-4058-8480-58a6243b5d61'), 'username': 'harshalkharabe', 'firstname': 'Harshal', 'lastname': 'Kharabe', 'email': 'harsh@k.com', 'phone_no': '1234554321', 'password': 'hkharabe', 'is_logged_in': 'string'}]
+(Background on this error at: https://sqlalche.me/e/14/9h9h)
+service.py:28 - 2024-08-30 23:25:51,584 - ERROR - Error : (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type boolean: "string"
+LINE 1: ...Kharabe', 'harsh@k.com', '1234554321', 'hkharabe', 'string')
+                                                              ^
+
+[SQL: INSERT INTO "user" (id, username, firstname, lastname, email, phone_no, password, is_logged_in) VALUES (%(id)s, %(username)s, %(firstname)s, %(lastname)s, %(email)s, %(phone_no)s, %(password)s, %(is_logged_in)s)]
+[parameters: {'id': UUID('309ee7dd-c2b7-4058-8480-58a6243b5d61'), 'username': 'harshalkharabe', 'firstname': 'Harshal', 'lastname': 'Kharabe', 'email': 'harsh@k.com', 'phone_no': '1234554321', 'password': 'hkharabe', 'is_logged_in': 'string'}]
+(Background on this error at: https://sqlalche.me/e/14/9h9h)
+api.py:34 - 2024-08-30 23:36:41,395 - ERROR - Error while user registration UserManagement.get_all_users() missing 1 required positional argument: 'db'
+api.py:34 - 2024-08-30 23:36:41,395 - ERROR - Error while user registration UserManagement.get_all_users() missing 1 required positional argument: 'db'
