@@ -24,19 +24,19 @@ class UserManagementApi:
             logger.error(f"Error while user registration {str(e)}")
             return e
         
-    @router.get("/register/")
-    def read_register_user():
+    @router.get("/users/")
+    def get_all_users():
         try:
-            result = UserManagement.read_register_user()
+            result = UserManagement.get_all_users()
             return result
         except Exception as e:
             logger.error(f"Error while user registration {str(e)}")
             return e
         
-    @router.get("/register/{user_id}/")
-    def read_register_user(user_id:uuid.UUID=Path()):
+    @router.get("/user/{user_id}/")
+    def get_user_by_id(user_id:uuid.UUID=Path()):
         try:
-            result = UserManagement.read_register_user_by_id(user_id)
+            result = UserManagement.get_user_by_id(user_id)
             return result
         except Exception as e:
             logger.error(f"Error while user registration {str(e)}")

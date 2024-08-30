@@ -27,7 +27,7 @@ class UserManagement:
             logger.error(f"Error : {str(e)}")
             return str(e)
     
-    def read_register_user():
+    def get_all_users():
         try:
             if len(users) == 0:
                 logger.info("File is empty!!")
@@ -38,7 +38,7 @@ class UserManagement:
         except Exception as e:
             return e
         
-    def read_register_user_by_id(user_id):
+    def get_user_by_id(user_id):
         try:
             for user in users:
                 user_id = str(user_id)
