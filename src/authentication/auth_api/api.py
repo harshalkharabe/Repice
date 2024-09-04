@@ -5,6 +5,7 @@ from src.db_session import get_db
 from src.authentication.auth_models.model import User_v2
 from src.authentication.auth_service.service import UserManagement
 from src.utils.logs import CustomLogger
+from sqlalchemy.orm import Session
 
 # Create an instance of CustomLogger with desired configuration
 logger_instance = CustomLogger(log_level='DEBUG', log_file_name='authentication.log', log_path='logs')
@@ -17,7 +18,7 @@ class UserManagementApi:
     router = APIRouter()
     
     @router.post("/register/")
-    def register(user:User_v2,db:str=Depends(get_db)):
+    async def register(user:User_v2,db:Session=Depends(get_db)):
         try:
             result = UserManagement.register_user(user,db)
             return result
@@ -26,7 +27,7 @@ class UserManagementApi:
             return e
         
     @router.get("/users/")
-    def get_all_users(db:str=Depends(get_db)):
+    async def get_all_users(db:Session=Depends(get_db)):
         try:
             result = UserManagement.get_all_users(db)
             return result
@@ -35,7 +36,7 @@ class UserManagementApi:
             return e
         
     @router.get("/user/{user_id}/")
-    def get_user_by_id(user_id:uuid.UUID=Path(),db:str=Depends(get_db)):
+    async def get_user_by_id(user_id:uuid.UUID=Path(),db:Session=Depends(get_db)):
         try:
             result = UserManagement.get_user_by_id(user_id,db)
             return result

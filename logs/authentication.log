@@ -96,3 +96,5 @@ LINE 1: ...Kharabe', 'harsh@k.com', '1234554321', 'hkharabe', 'string')
 (Background on this error at: https://sqlalche.me/e/14/9h9h)
 api.py:34 - 2024-08-30 23:36:41,395 - ERROR - Error while user registration UserManagement.get_all_users() missing 1 required positional argument: 'db'
 api.py:34 - 2024-08-30 23:36:41,395 - ERROR - Error while user registration UserManagement.get_all_users() missing 1 required positional argument: 'db'
+service.py:22 - 2024-09-02 12:57:48,745 - INFO - Register user successfully {'id': UUID('6180fcc8-b981-4217-9306-d6c1feb14253'), 'username': 'aniketbhudke', 'firstname': 'Aniket', 'lastname': 'Bhudke', 'email': 'ab@12.com', 'phone_no': '21903478547', 'password': '@niket', 'is_logged_in': True}
+service.py:22 - 2024-09-02 12:57:48,745 - INFO - Register user successfully {'id': UUID('6180fcc8-b981-4217-9306-d6c1feb14253'), 'username': 'aniketbhudke', 'firstname': 'Aniket', 'lastname': 'Bhudke', 'email': 'ab@12.com', 'phone_no': '21903478547', 'password': '@niket', 'is_logged_in': True}

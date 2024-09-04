@@ -10,9 +10,6 @@ logger_instance = CustomLogger(log_level='DEBUG', log_file_name='authentication.
 logger = logger_instance.get_logger()
 
 
-data = pandas.read_csv("src/authentication/user_data.csv")
-users = data.to_dict(orient="records")
-
 class UserManagement:
     def register_user(user,db):
         try:
@@ -22,6 +19,7 @@ class UserManagement:
             db.add(user_data)
             db.commit()
             db.refresh(user_data)
+            logger.info(f"Register user successfully {dic}")
             return user_data
 
         except Exception as e:
