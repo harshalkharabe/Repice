@@ -11,29 +11,30 @@ logger = logger_instance.get_logger()
 
 
 class UserManagement:
+
     def register_user(user,db):
         try:
-            user.id = uuid.uuid4()
-            dic = user.__dict__
-            user_data = User(**dic)
-            db.add(user_data)
-            db.commit()
-            db.refresh(user_data)
-            logger.info(f"Register user successfully {dic}")
-            return user_data
+            find_user_by_email = db.query(User).filter(User.email==user.email).first()
+            if find_user_by_email:
+                return "User already registered"
+            else:
+                find_user_by_username = db.query(User).filter(User.username==user.username).first()
+                if find_user_by_username:
+                    return "Username already used"
+                else:    
+                    user.id = uuid.uuid4()
+                    dic = user.__dict__
+                    user_data = User(**dic)
+                    db.add(user_data)
+                    db.commit()
+                    db.refresh(user_data)
+                    logger.info(f"Register user successfully {dic}")
+                    return user_data
 
         except Exception as e:
             logger.error(f"Error : {str(e)}")
             return str(e)
     
-    def get_all_users(db):
-        try:
-            result = db.query(User).all()
-            return result
-        except Exception as e:
-            logger.error(f"Error : {str(e)}")
-            return e
-        
     def get_user_by_id(user_id,db):
         try:
             result = db.query(User).filter(User.id==user_id).first()

@@ -7,6 +7,10 @@ from src.authentication.auth_service.service import UserManagement
 from src.utils.logs import CustomLogger
 from sqlalchemy.orm import Session
 
+SECRET_KEY = "011932153fd276ab814787646c6495032f6d0974ac31c508cfdc7918f6b03126"
+ALOGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 50
+
 # Create an instance of CustomLogger with desired configuration
 logger_instance = CustomLogger(log_level='DEBUG', log_file_name='authentication.log', log_path='logs')
 
@@ -21,15 +25,6 @@ class UserManagementApi:
     async def register(user:User_v2,db:Session=Depends(get_db)):
         try:
             result = UserManagement.register_user(user,db)
-            return result
-        except Exception as e:
-            logger.error(f"Error while user registration {str(e)}")
-            return e
-        
-    @router.get("/users/")
-    async def get_all_users(db:Session=Depends(get_db)):
-        try:
-            result = UserManagement.get_all_users(db)
             return result
         except Exception as e:
             logger.error(f"Error while user registration {str(e)}")

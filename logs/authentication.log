@@ -98,3 +98,15 @@ api.py:34 - 2024-08-30 23:36:41,395 - ERROR - Error while user registration User
 api.py:34 - 2024-08-30 23:36:41,395 - ERROR - Error while user registration UserManagement.get_all_users() missing 1 required positional argument: 'db'
 service.py:22 - 2024-09-02 12:57:48,745 - INFO - Register user successfully {'id': UUID('6180fcc8-b981-4217-9306-d6c1feb14253'), 'username': 'aniketbhudke', 'firstname': 'Aniket', 'lastname': 'Bhudke', 'email': 'ab@12.com', 'phone_no': '21903478547', 'password': '@niket', 'is_logged_in': True}
 service.py:22 - 2024-09-02 12:57:48,745 - INFO - Register user successfully {'id': UUID('6180fcc8-b981-4217-9306-d6c1feb14253'), 'username': 'aniketbhudke', 'firstname': 'Aniket', 'lastname': 'Bhudke', 'email': 'ab@12.com', 'phone_no': '21903478547', 'password': '@niket', 'is_logged_in': True}
+service.py:35 - 2024-09-05 18:21:21,397 - ERROR - Error : SQL expression for WHERE/HAVING role expected, got <class 'src.authentication.auth_models.model.User'>.
+service.py:35 - 2024-09-05 18:21:21,397 - ERROR - Error : SQL expression for WHERE/HAVING role expected, got <class 'src.authentication.auth_models.model.User'>.
+service.py:35 - 2024-09-07 09:42:31,978 - ERROR - Error : SQL expression for WHERE/HAVING role expected, got <class 'src.authentication.auth_models.model.User'>.
+service.py:35 - 2024-09-07 09:42:31,978 - ERROR - Error : SQL expression for WHERE/HAVING role expected, got <class 'src.authentication.auth_models.model.User'>.
+service.py:35 - 2024-09-07 09:43:53,969 - ERROR - Error : 'Query' object has no attribute 'WHERE'
+service.py:35 - 2024-09-07 09:43:53,969 - ERROR - Error : 'Query' object has no attribute 'WHERE'
+service.py:31 - 2024-09-07 09:44:35,243 - INFO - Register user successfully {'id': UUID('25bb6e09-f0f7-42fb-ab8f-1f242377f17e'), 'username': 'kunalaswar', 'firstname': 'Kunal', 'lastname': 'Aswar', 'email': 'ku@aswar.com', 'phone_no': '12312312', 'password': 'kun@l', 'is_logged_in': True}
+service.py:31 - 2024-09-07 09:44:35,243 - INFO - Register user successfully {'id': UUID('25bb6e09-f0f7-42fb-ab8f-1f242377f17e'), 'username': 'kunalaswar', 'firstname': 'Kunal', 'lastname': 'Aswar', 'email': 'ku@aswar.com', 'phone_no': '12312312', 'password': 'kun@l', 'is_logged_in': True}
+service.py:35 - 2024-09-07 09:45:52,384 - ERROR - Error : SQL expression for WHERE/HAVING role expected, got <class 'src.authentication.auth_models.model.User'>.
+service.py:35 - 2024-09-07 09:45:52,384 - ERROR - Error : SQL expression for WHERE/HAVING role expected, got <class 'src.authentication.auth_models.model.User'>.
+service.py:31 - 2024-09-07 09:48:26,143 - INFO - Register user successfully {'id': UUID('21e59f5e-6f16-4ed0-8b53-636698eb7e3d'), 'username': 'prathamesh', 'firstname': 'Pratham', 'lastname': 'Rand', 'email': 'p@ande.com', 'phone_no': '12312312', 'password': 'teja', 'is_logged_in': True}
+service.py:31 - 2024-09-07 09:48:26,143 - INFO - Register user successfully {'id': UUID('21e59f5e-6f16-4ed0-8b53-636698eb7e3d'), 'username': 'prathamesh', 'firstname': 'Pratham', 'lastname': 'Rand', 'email': 'p@ande.com', 'phone_no': '12312312', 'password': 'teja', 'is_logged_in': True}
