@@ -2,6 +2,7 @@ import uuid
 import pandas
 from src.utils.logs import CustomLogger
 from src.authentication.auth_models.model import User
+from src.authentication.auth_dao.dao import UserDAO
 
 # Create an instance of CustomLogger with desired configuration
 logger_instance = CustomLogger(log_level='DEBUG', log_file_name='authentication.log', log_path='logs')
@@ -37,7 +38,20 @@ class UserManagement:
     
     def get_user_by_id(user_id,db):
         try:
-            result = db.query(User).filter(User.id==user_id).first()
+            result = UserDAO.get_user_by_id(user_id,db)
             return result
         except Exception as e:
             return e
+    
+    def login(user,db):
+        try:
+            user_data = UserDAO.get_user_by_username(user,db)
+            if user_data:
+                UserDAO.update_user_login_status(user.username,True,db)
+                logger.info(f"{user_data.username} is logging successfully")
+                return {"message":"User Login Successfully"}
+            else:
+                return "User dose not exist"
+        except Exception as e:
+            logger.error(f"Error : {e}")
+            return str(e)

@@ -110,3 +110,15 @@ service.py:35 - 2024-09-07 09:45:52,384 - ERROR - Error : SQL expression for WHE
 service.py:35 - 2024-09-07 09:45:52,384 - ERROR - Error : SQL expression for WHERE/HAVING role expected, got <class 'src.authentication.auth_models.model.User'>.
 service.py:31 - 2024-09-07 09:48:26,143 - INFO - Register user successfully {'id': UUID('21e59f5e-6f16-4ed0-8b53-636698eb7e3d'), 'username': 'prathamesh', 'firstname': 'Pratham', 'lastname': 'Rand', 'email': 'p@ande.com', 'phone_no': '12312312', 'password': 'teja', 'is_logged_in': True}
 service.py:31 - 2024-09-07 09:48:26,143 - INFO - Register user successfully {'id': UUID('21e59f5e-6f16-4ed0-8b53-636698eb7e3d'), 'username': 'prathamesh', 'firstname': 'Pratham', 'lastname': 'Rand', 'email': 'p@ande.com', 'phone_no': '12312312', 'password': 'teja', 'is_logged_in': True}
+service.py:55 - 2024-09-08 13:48:32,151 - ERROR - Error : (builtins.TypeError) Not a boolean value: 'True'
+[SQL: UPDATE "user" SET is_logged_in=%(is_logged_in)s WHERE "user".username = %(username_1)s]
+[parameters: [{}]]
+service.py:55 - 2024-09-08 13:48:32,151 - ERROR - Error : (builtins.TypeError) Not a boolean value: 'True'
+[SQL: UPDATE "user" SET is_logged_in=%(is_logged_in)s WHERE "user".username = %(username_1)s]
+[parameters: [{}]]
+service.py:55 - 2024-09-08 13:57:19,393 - ERROR - Error : type object 'UserDAO' has no attribute 'get_user_by_user_name'
+service.py:55 - 2024-09-08 13:57:19,393 - ERROR - Error : type object 'UserDAO' has no attribute 'get_user_by_user_name'
+service.py:55 - 2024-09-08 13:57:33,832 - ERROR - Error : type object 'UserDAO' has no attribute 'get_user_by_username'
+service.py:55 - 2024-09-08 13:57:33,832 - ERROR - Error : type object 'UserDAO' has no attribute 'get_user_by_username'
+service.py:55 - 2024-09-08 13:57:35,021 - ERROR - Error : type object 'UserDAO' has no attribute 'get_user_by_username'
+service.py:55 - 2024-09-08 13:57:35,021 - ERROR - Error : type object 'UserDAO' has no attribute 'get_user_by_username'

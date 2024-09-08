@@ -27,4 +27,7 @@ class User_v2(BaseModel):
     password: str
     is_logged_in: bool
     
+class User_Login(BaseModel):
+    username:str
+    password:str
     
