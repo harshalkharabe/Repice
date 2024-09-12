@@ -122,3 +122,59 @@ service.py:55 - 2024-09-08 13:57:33,832 - ERROR - Error : type object 'UserDAO' 
 service.py:55 - 2024-09-08 13:57:33,832 - ERROR - Error : type object 'UserDAO' has no attribute 'get_user_by_username'
 service.py:55 - 2024-09-08 13:57:35,021 - ERROR - Error : type object 'UserDAO' has no attribute 'get_user_by_username'
 service.py:55 - 2024-09-08 13:57:35,021 - ERROR - Error : type object 'UserDAO' has no attribute 'get_user_by_username'
+service.py:32 - 2024-09-12 15:14:37,916 - INFO - Register user successfully {'id': UUID('8f34d0e3-d192-4004-b13d-276594ea7c59'), 'username': 'hk', 'firstname': 'string', 'lastname': 'string', 'email': 'user@example.com', 'phone_no': 'string', 'password': 'string', 'is_logged_in': True}
+service.py:32 - 2024-09-12 15:14:37,916 - INFO - Register user successfully {'id': UUID('8f34d0e3-d192-4004-b13d-276594ea7c59'), 'username': 'hk', 'firstname': 'string', 'lastname': 'string', 'email': 'user@example.com', 'phone_no': 'string', 'password': 'string', 'is_logged_in': True}
+service.py:51 - 2024-09-12 15:21:19,249 - INFO - harshalkharabe is logging successfully
+service.py:51 - 2024-09-12 15:21:19,249 - INFO - harshalkharabe is logging successfully
+api.py:49 - 2024-09-12 21:37:57,775 - ERROR - Error in login_for_access_token type object 'UserDAO' has no attribute 'find_user_by_username'
+api.py:49 - 2024-09-12 21:37:57,775 - ERROR - Error in login_for_access_token type object 'UserDAO' has no attribute 'find_user_by_username'
+api.py:49 - 2024-09-12 21:38:06,275 - ERROR - Error in login_for_access_token type object 'UserDAO' has no attribute 'find_user_by_username'
+api.py:49 - 2024-09-12 21:38:06,275 - ERROR - Error in login_for_access_token type object 'UserDAO' has no attribute 'find_user_by_username'
+api.py:49 - 2024-09-12 21:38:12,602 - ERROR - Error in login_for_access_token type object 'UserDAO' has no attribute 'find_user_by_username'
+api.py:49 - 2024-09-12 21:38:12,602 - ERROR - Error in login_for_access_token type object 'UserDAO' has no attribute 'find_user_by_username'
+api.py:49 - 2024-09-12 21:39:01,783 - ERROR - Error in login_for_access_token UserDAO.find_user_by_username() missing 1 required positional argument: 'db'
+api.py:49 - 2024-09-12 21:39:01,783 - ERROR - Error in login_for_access_token UserDAO.find_user_by_username() missing 1 required positional argument: 'db'
+api.py:49 - 2024-09-12 21:40:08,380 - ERROR - Error in login_for_access_token UserDAO.update_user_login_status() missing 1 required positional argument: 'db'
+api.py:49 - 2024-09-12 21:40:08,380 - ERROR - Error in login_for_access_token UserDAO.update_user_login_status() missing 1 required positional argument: 'db'
+api.py:49 - 2024-09-12 21:41:22,338 - ERROR - Error in login_for_access_token (builtins.TypeError) Not a boolean value: 'Yes'
+[SQL: UPDATE "user" SET is_logged_in=%(is_logged_in)s WHERE "user".username = %(username_1)s]
+[parameters: [{}]]
+api.py:49 - 2024-09-12 21:41:22,338 - ERROR - Error in login_for_access_token (builtins.TypeError) Not a boolean value: 'Yes'
+[SQL: UPDATE "user" SET is_logged_in=%(is_logged_in)s WHERE "user".username = %(username_1)s]
+[parameters: [{}]]
+api.py:49 - 2024-09-12 21:42:17,059 - ERROR - Error in login_for_access_token 
+api.py:49 - 2024-09-12 21:42:17,059 - ERROR - Error in login_for_access_token 
+api.py:49 - 2024-09-12 21:43:54,560 - ERROR - Error in login_for_access_token 
+api.py:49 - 2024-09-12 21:43:54,560 - ERROR - Error in login_for_access_token 
+api.py:49 - 2024-09-12 21:44:48,959 - ERROR - Error in login_for_access_token 
+api.py:49 - 2024-09-12 21:44:48,959 - ERROR - Error in login_for_access_token 
+api.py:49 - 2024-09-12 21:45:05,325 - ERROR - Error in login_for_access_token 
+api.py:49 - 2024-09-12 21:45:05,325 - ERROR - Error in login_for_access_token 
+api.py:49 - 2024-09-12 21:46:44,244 - ERROR - Error in login_for_access_token 
+api.py:49 - 2024-09-12 21:46:44,244 - ERROR - Error in login_for_access_token 
+api.py:49 - 2024-09-12 21:48:23,397 - ERROR - Error in login_for_access_token 
+api.py:49 - 2024-09-12 21:48:23,397 - ERROR - Error in login_for_access_token 
+api.py:49 - 2024-09-12 21:48:56,869 - ERROR - Error in login_for_access_token 
+api.py:49 - 2024-09-12 21:48:56,869 - ERROR - Error in login_for_access_token 
+api.py:49 - 2024-09-12 21:49:17,562 - ERROR - Error in login_for_access_token 
+api.py:49 - 2024-09-12 21:49:17,562 - ERROR - Error in login_for_access_token 
+api.py:46 - 2024-09-12 21:50:39,213 - INFO - User sagardhok logged in.
+api.py:46 - 2024-09-12 21:50:39,213 - INFO - User sagardhok logged in.
+api.py:49 - 2024-09-12 21:51:02,304 - ERROR - Error in login_for_access_token 
+api.py:49 - 2024-09-12 21:51:02,304 - ERROR - Error in login_for_access_token 
+api.py:46 - 2024-09-12 21:51:12,974 - INFO - User harshalkharabe logged in.
+api.py:46 - 2024-09-12 21:51:12,974 - INFO - User harshalkharabe logged in.
+api.py:46 - 2024-09-12 21:53:02,604 - INFO - User sagardhok logged in.
+api.py:46 - 2024-09-12 21:53:02,604 - INFO - User sagardhok logged in.
+api.py:52 - 2024-09-12 21:55:25,977 - INFO - User sagardhok logged in.
+api.py:52 - 2024-09-12 21:55:25,977 - INFO - User sagardhok logged in.
+api.py:52 - 2024-09-12 21:55:35,143 - INFO - User sagardhok logged in.
+api.py:52 - 2024-09-12 21:55:35,143 - INFO - User sagardhok logged in.
+api.py:52 - 2024-09-12 21:55:55,917 - INFO - User aniketbhudke logged in.
+api.py:52 - 2024-09-12 21:55:55,917 - INFO - User aniketbhudke logged in.
+api.py:55 - 2024-09-12 21:56:02,137 - ERROR - Error in login_for_access_token 
+api.py:55 - 2024-09-12 21:56:02,137 - ERROR - Error in login_for_access_token 
+api.py:52 - 2024-09-12 21:56:08,127 - INFO - User sagardhok logged in.
+api.py:52 - 2024-09-12 21:56:08,127 - INFO - User sagardhok logged in.
+api.py:50 - 2024-09-12 21:57:13,288 - INFO - User sagardhok logged in.
+api.py:50 - 2024-09-12 21:57:13,288 - INFO - User sagardhok logged in.

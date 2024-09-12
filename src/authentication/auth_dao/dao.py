@@ -4,12 +4,17 @@ from src.authentication.auth_models.model import User
 class UserDAO:    
 
     @staticmethod
+    def find_user_by_username(username,db):
+        user = db.query(User).filter(User.username == username).first()
+        return user
+
+    @staticmethod
     def get_user_by_id(user_id,db):
         result = db.query(User).filter(User.id==user_id).first()
         return result
 
     @staticmethod
-    def get_user_by_username(user,db):
+    def get_user_by_username_password(user,db):
         query = db.query(User).filter(User.username==user.username,User.password==user.password).first()
         return query
 
