@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta
 import uuid
 from jose import JWTError, jwt
 from fastapi import Depends, APIRouter, HTTPException, Path
@@ -10,16 +11,18 @@ from src.utils.logs import CustomLogger
 from sqlalchemy.orm import Session
 
 SECRET_KEY = "011932153fd276ab814787646c6495032f6d0974ac31c508cfdc7918f6b03126"
-ALOGORITHM = "HS256"
+ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 50
 
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/token/")
 
 # Helper function to verify and decode the JWT token
+# Corrected token creation
+
 def verify_token(token: str):
     try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALOGORITHM])
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         username: str = payload.get("sub")
         if username is None:
             raise HTTPException(status_code=401, detail="Invalid token")
@@ -34,6 +37,7 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
     if not user:
         raise HTTPException(status_code=400, detail="User not found")
     return user
+
 logger_instance = CustomLogger(log_level='DEBUG', log_file_name='authentication.log', log_path='logs')
 
 

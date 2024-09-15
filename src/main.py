@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Request
 from src.authentication.auth_api.api import UserManagementApi
+from src.recipie.api.api import RecipeAPI
 from src.utils.logs import CustomLogger
 
 
@@ -16,3 +17,4 @@ app = FastAPI(
 
 # UserManagementApi = api.UserManagementApi()
 app.include_router(UserManagementApi.router, tags=["User Authentication"])
+app.include_router(RecipeAPI.router, tags=["Recipes"])

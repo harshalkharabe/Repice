@@ -1,0 +1,18 @@
+api.py:23 - 2024-09-15 21:59:25,903 - ERROR - Error : __init__() takes 1 positional argument but 2 were given
+api.py:23 - 2024-09-15 22:02:33,284 - ERROR - Error : __init__() takes 1 positional argument but 2 were given
+api.py:26 - 2024-09-15 22:03:32,075 - ERROR - Error : __init__() takes 1 positional argument but 2 were given
+api.py:26 - 2024-09-15 22:04:51,650 - ERROR - Error : __init__() takes 1 positional argument but 2 were given
+api.py:27 - 2024-09-15 22:05:21,329 - ERROR - Error : __init__() takes 1 positional argument but 2 were given
+api.py:27 - 2024-09-15 22:05:45,436 - ERROR - Error : __init__() takes 1 positional argument but 2 were given
+api.py:27 - 2024-09-15 22:06:01,003 - ERROR - Error : __init__() takes 1 positional argument but 2 were given
+api.py:27 - 2024-09-15 22:06:16,844 - ERROR - Error : __init__() takes 1 positional argument but 2 were given
+api.py:27 - 2024-09-15 22:06:53,369 - ERROR - Error : __init__() takes 1 positional argument but 2 were given
+api.py:27 - 2024-09-15 22:08:50,800 - ERROR - Error : Foreign key associated with column 'recipes.user_id' could not find table 'users' with which to generate a foreign key to target column 'id'
+api.py:27 - 2024-09-15 22:09:14,305 - ERROR - Error : (psycopg2.errors.DatatypeMismatch) column "id" is of type integer but expression is of type uuid
+LINE 1: ...gredients, category, user_id, created_at) VALUES ('d173d59e-...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+
+[SQL: INSERT INTO recipes (id, title, description, ingredients, category, user_id, created_at) VALUES (%(id)s, %(title)s, %(description)s, %(ingredients)s, %(category)s, %(user_id)s, %(created_at)s)]
+[parameters: {'id': UUID('d173d59e-55ea-495b-a7a2-f6c62886d73f'), 'title': 'Pizza', 'description': 'A delicious and moist chocolate cake recipe', 'ingredients': ['2 cups flour'], 'category': 'Sweet', 'user_id': UUID('9293572e-2074-4a2c-9141-93796fb40081'), 'created_at': datetime.datetime(2024, 9, 15, 16, 39, 14, 305539)}]
+(Background on this error at: https://sqlalche.me/e/14/f405)

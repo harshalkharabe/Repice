@@ -20,17 +20,17 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 
 def create_access_token(data: dict, expires_delta: timedelta = None):
-        try:
-            to_encode = data.copy()
-            if expires_delta:
-                expire = datetime.utcnow() + expires_delta
-            else:
-                expire = datetime.utcnow() + timedelta(minutes=15)
-            to_encode.update({"exp": expire})
+    try:
+        to_encode = data.copy()
+        if expires_delta:
+            expire = datetime.utcnow() + expires_delta
+        else:
+            expire = datetime.utcnow() + timedelta(minutes=15)
+        to_encode.update({"exp": expire})
 
-            encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALOGORITHM)
-            return encoded_jwt
-        except Exception as e:
+        encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALOGORITHM)
+        return encoded_jwt
+    except Exception as e:
             raise HTTPException(status_code=400, detail="Error in create_access_token")
 
 
@@ -47,19 +47,11 @@ class UserManagement:
                 access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
                 access_token = create_access_token(
                     data={
-                        "user": form_data.username,
+                        "sub": form_data.username,
                         "user_id":str(find_user_by_username.id),
                     },
                     expires_delta=access_token_expires)
                 
-                # refresh_token = create_refresh_token(
-                #     data={
-                #         "user": form_data.username,
-                #         "user_id":str(find_user_by_username.id),
-                #         "tenant_id":str(find_user_by_username.tenant_id),
-                #         "role_id":str(find_user_by_username.role)
-                #     })
-                # Return the token and user data
                 response_data = {
                 "message":f"{find_user_by_username.username} logged in successfully",
                 "access_token": access_token,
@@ -67,7 +59,6 @@ class UserManagement:
                 "user_id": f"{find_user_by_username.id}"
                  }
                 return response_data
-                # return find_user_by_username
             else:
                 raise HTTPException(status_code=400, detail="Incorrect password")
         else:

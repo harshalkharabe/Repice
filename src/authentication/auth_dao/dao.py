@@ -1,7 +1,6 @@
 from src.authentication.auth_models.model import User
 
-
-class UserDAO:    
+class UserDAO:
 
     @staticmethod
     def find_user_by_username(username,db):
